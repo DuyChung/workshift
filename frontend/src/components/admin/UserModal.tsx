@@ -78,7 +78,8 @@ export default function UserModal({ open, onClose, user }: Props) {
   const onSubmit = (data: FormData) => {
     const payload: any = { ...data };
     if (!payload.password) delete payload.password;
-    if (!payload.dateOfBirth) delete payload.dateOfBirth; // thêm dòng này
+    if (!payload.dateOfBirth) delete payload.dateOfBirth;
+    if (!isEdit) delete payload.status;
     mutation.mutate(payload);
   };
 
