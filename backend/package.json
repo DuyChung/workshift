@@ -6,7 +6,7 @@
   },
   "description": "WorkShift internal schedule management - Backend",
   "scripts": {
-    "start": "npm run build && npx prisma migrate deploy && npx prisma db seed && node dist/main",
+    "start": "npx prisma generate && nest build && npx prisma migrate deploy && npx prisma db seed && node dist/main",
     "start:dev": "nest start --watch",
     "start:prod": "node dist/main",
     "build": "nest build",
