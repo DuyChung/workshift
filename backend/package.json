@@ -6,10 +6,10 @@
   },
   "description": "WorkShift internal schedule management - Backend",
   "scripts": {
-    "start": "nest build || true && ls dist && node dist/main",
+    "start": "nest build && ls -la dist/ && node dist/main",
     "start:dev": "nest start --watch",
     "start:prod": "node dist/main",
-    "build": "nest build",
+    "build": "npx prisma generate && nest build",
     "lint": "eslint src --ext .ts",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev",
